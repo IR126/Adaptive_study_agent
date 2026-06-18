@@ -104,13 +104,16 @@ Add the following to your Claude Desktop configuration file, replacing the paths
 
 ```json
 {
-  "mcpServers": {
-    "adaptive-study-agent": {
-      "command": "/path/to/agenticenv/Scripts/python.exe",
-      "args": ["/path/to/adaptive-study-agent/agents/mcp_server.py"],
-      "cwd": "/path/to/adaptive-study-agent"
+  "mcpServers": "adaptive-study-agent": {
+      "command": "D:\\agents\\adaptive-study-agent\\agenticenv\\Scripts\\python.exe",
+      "args": [
+        "-m", "agents.mcp_server"
+      ],
+      "cwd": "D:\\agents\\adaptive-study-agent",
+      "env": {
+        "PYTHONPATH": "D:\\agents\\adaptive-study-agent"
+      }
     }
-  }
 }
 ```
 
