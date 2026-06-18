@@ -1,0 +1,6 @@
+agenticenv/
+.env
+__pycache__/
+*.pyc
+confidence_store.json
+.vscode/
